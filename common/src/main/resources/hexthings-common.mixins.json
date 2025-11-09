@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "io.github.real_septicake.hexthings.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "MixinDatagenMain"
+  ],
+  "plugin": "io.github.real_septicake.hexthings.mixin.HexthingsMixinConfigPlugin",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

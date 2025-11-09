@@ -1,0 +1,8 @@
+{
+  hexdoc: {
+    hexthings: {
+      title: "HexThings Book",
+      description: "Some extra patterns I think would be neat",
+    },
+  }
+}

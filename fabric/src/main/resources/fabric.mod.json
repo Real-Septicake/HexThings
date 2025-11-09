@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "hexthings",
+  "version": "${version}",
+  "name": "HexThings",
+  "description": "Some extra patterns I think would be neat",
+  "authors": [
+    "Real-Septicake"
+  ],
+  "contact": {
+    "homepage": "https://real-septicake.github.io/HexThings",
+    "sources": "https://github.com/Real-Septicake/HexThings"
+  },
+  "license": "MIT",
+  "icon": "assets/hexthings/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [{
+      "adapter": "kotlin",
+      "value": "io.github.real_septicake.hexthings.fabric.FabricHexthings"
+    }],
+    "client": [{
+      "adapter": "kotlin",
+      "value": "io.github.real_septicake.hexthings.fabric.FabricHexthingsClient"
+    }],
+    "server": [{
+      "adapter": "kotlin",
+      "value": "io.github.real_septicake.hexthings.fabric.FabricHexthingsServer"
+    }],
+    "fabric-datagen": [{
+      "adapter": "kotlin",
+      "value": "io.github.real_septicake.hexthings.fabric.datagen.FabricHexthingsDatagen"
+    }],
+    "modmenu": [{
+      "adapter": "kotlin",
+      "value": "io.github.real_septicake.hexthings.fabric.FabricHexthingsModMenu"
+    }]
+  },
+  "mixins": [
+    "hexthings-common.mixins.json",
+    "hexthings-fabric.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${versions.minecraft}",
+    "fabricloader": ">=${versions.fabric_loader}",
+    "fabric-api": ">=${versions.fabric_api}",
+    "fabric-language-kotlin": ">=${versions.kotlin_fabric}",
+    "architectury": ">=${versions.architectury}",
+    "hexcasting": ">=${versions.hexcasting_dependency}",
+    "cloth-config": ">=${versions.clothConfig}"
+  },
+  "suggests": {
+    "modmenu": ">=${versions.modMenu}"
+  }
+}

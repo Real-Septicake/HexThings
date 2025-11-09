@@ -1,0 +1,15 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+# https://copier.readthedocs.io/en/stable/updating/#never-change-the-answers-file-manually
+_commit: v2.2.2
+_src_path: gh:FallingColors/hexdummy
+advanced: false
+description: Some extra patterns I think would be neat
+display_name: HexThings
+github_repo: HexThings
+github_user: Real-Septicake
+java_package: io.github.real_septicake.hexthings
+mappings_name: Mojmap
+minecraft_version_in_mod_version: true
+mit_license: true
+mod_version: 0.1.0
+modid: hexthings
