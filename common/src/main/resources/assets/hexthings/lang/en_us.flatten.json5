@@ -5,13 +5,30 @@
         spells: {
           dummy_spells: {
             "": "Dummy Spells",
-            congratulate: "Remove an entity from the stack, then congratulate them.",
-          },
-        },
-        great_spells: {
-          dummy_great_spells: {
-            "": "Dummy Great Spells",
-            "congratulate/great": "Same as $(l:patterns/spells/dummy_spells#hexthings:congratulate)$(action)Congratulate/$, but as a great spell.",
+            noop: "Everything keeps happening constantly, action after \
+            spell after iota after pattern. I've created a pattern that \
+            does nothing in the hopes things might slow down. Conveniently, \
+            this pattern's lack of a function and its flexibility in form \
+            make it quite useful for making changes to a spell later.",
+            insert: "Surgeon's Exaltation works incredibly well on its own, \
+            but I find myself wishing I could replace the iota with more than \
+            one more every now and then. As a result, I created this pattern, \
+            allowing me to do just that.",
+            unquote: {
+              "1": "There's a technique known as \"Iota Embedding\" mentioned \
+              in texts, and I've figured out how to make that process simpler. \
+              This pattern can be used to place raw iotas directly into an \
+              Introspection-Restrospection pair.",
+              "2": "After drawing this pattern, all subsequent patterns are \
+              evaluated as normal starting from a near-empty stack until a \
+              Retrojection is drawn. At which point all but the Null iota \
+              placed at the base of the stack by Introjection, if I have not \
+              removed it already, will be placed in the list originally \
+              escaped by the Introjection, surrounded by another Introjection-\
+              Retrojection pair."
+            },
+            requote: "After putting most of the contents of the stack back into \
+            the list, patterns are escaped as usual."
           },
         },
       },
@@ -21,25 +38,27 @@
   hexcasting: {
     action: {
       "hexthings:": {
-        congratulate: "Congratulate Player",
-        "congratulate/great": "Great Congrats!",
+        noop: "Patience",
+        insert: "Flattening Exaltation",
+        unquote: "Introjection",
+        requote: "Retrojection"
       },
 
       // use this to add shortened versions of pattern names if the full name won't fit in the ingame book
       // you don't need to add an entry for every pattern - the above value will be used as a default
       book: {
         "hexthings:": {
-          congratulate: "Congratulate",
+//          noop: "No-Op",
+//          insert: "Flat Insert"
         },
       },
     },
+    mishap: {
+      "nested_unquote": "You cannot Introject deeper."
+    }
   },
 
   text: {
-    hexthings: {
-      congrats: "Tell %1$s they're doing a good job!",
-    },
-
     "autoconfig.hexthings": {
       title: "HexThings Config",
 

@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger
 import io.github.real_septicake.hexthings.config.HexthingsServerConfig
 import io.github.real_septicake.hexthings.networking.HexthingsNetworking
 import io.github.real_septicake.hexthings.registry.HexthingsActions
+import io.github.real_septicake.hexthings.registry.HexthingsSpecialHandlers
 
 object Hexthings {
     const val MODID = "hexthings"
@@ -20,6 +21,7 @@ object Hexthings {
         HexthingsServerConfig.init()
         initRegistries(
             HexthingsActions,
+            HexthingsSpecialHandlers
         )
         HexthingsNetworking.init()
     }

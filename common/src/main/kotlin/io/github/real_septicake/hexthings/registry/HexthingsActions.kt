@@ -6,15 +6,16 @@ import at.petrak.hexcasting.api.casting.math.HexDir
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.common.lib.HexRegistries
 import at.petrak.hexcasting.common.lib.hex.HexActions
-import io.github.real_septicake.hexthings.casting.actions.spells.OpCongratulate
+import io.github.real_septicake.hexthings.casting.actions.spells.OpFlatInsert
+import io.github.real_septicake.hexthings.casting.actions.spells.meta.OpResumeEscape
 
 object HexthingsActions : HexthingsRegistrar<ActionRegistryEntry>(
     HexRegistries.ACTION,
     { HexActions.REGISTRY },
 ) {
-    val CONGRATULATE = make("congratulate", HexDir.WEST, "eed", OpCongratulate)
+    val FLAT_IN = make("insert", HexDir.NORTH_WEST, "wqwaeawqw", OpFlatInsert)
 
-    val GREAT_CONGRATULATE = make("congratulate/great", HexDir.EAST, "qwwqqqwwqwded", OpCongratulate)
+    val ESCAPE_RESUME = make("escresume", HexDir.NORTH_WEST, "deee", OpResumeEscape)
 
     private fun make(name: String, startDir: HexDir, signature: String, action: Action) =
         make(name, startDir, signature) { action }

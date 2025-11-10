@@ -6,6 +6,7 @@
   "client": [
   ],
   "mixins": [
+    "CastingVMMixin",
     "MixinDatagenMain"
   ],
   "plugin": "io.github.real_septicake.hexthings.mixin.HexthingsMixinConfigPlugin",

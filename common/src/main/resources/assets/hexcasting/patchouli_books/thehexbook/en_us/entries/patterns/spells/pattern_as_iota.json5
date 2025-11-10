@@ -1,0 +1,36 @@
+{
+  name: "hexcasting.entry.patterns_as_iotas",
+  category: "hexcasting:patterns",
+  icon: "minecraft:emerald",
+  advancement: "hexcasting:root",
+  pages: [
+    {
+      type: "hexcasting:manual_pattern_nosig",
+      anchor: "hexthings:unquote",
+      text: "hexthings.book.patterns.spells.dummy_spells.unquote.1",
+      header: "hexcasting.action.hexthings:unquote",
+      patterns: [
+        {
+          startdir: "NORTH_EAST",
+          signature: "aqqq"
+        }
+      ]
+    },
+    {
+      type: "patchouli:text",
+      text: "hexthings.book.patterns.spells.dummy_spells.unquote.2"
+    },
+    {
+      type: "hexcasting:manual_pattern_nosig",
+      anchor: "hexthings:requote",
+      text: "hexthings.book.patterns.spells.dummy_spells.requote",
+      header: "hexcasting.action.hexthings:requote",
+      patterns: [
+        {
+          startdir: "NORTH_WEST",
+          signature: "deee"
+        }
+      ]
+    }
+  ],
+}
