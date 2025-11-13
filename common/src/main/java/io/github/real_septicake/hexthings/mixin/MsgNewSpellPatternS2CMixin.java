@@ -28,8 +28,7 @@ public class MsgNewSpellPatternS2CMixin {
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/network/FriendlyByteBuf;readInt()I",
-                    shift = At.Shift.AFTER,
-                    remap = false
+                    shift = At.Shift.AFTER
             ),
             remap = false
     )
