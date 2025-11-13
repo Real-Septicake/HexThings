@@ -24,7 +24,7 @@ public class MsgNewSpellPatternS2CMixin {
     private static int depth;
 
     @Inject(
-            method = "Lat/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C;deserialize(Lio/netty/buffer/ByteBuf;)Lat/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C;",
+            method = "deserialize",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/network/FriendlyByteBuf;readInt()I",
@@ -38,7 +38,7 @@ public class MsgNewSpellPatternS2CMixin {
     }
 
     @Inject(
-            method = "Lat/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C;deserialize(Lio/netty/buffer/ByteBuf;)Lat/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C;",
+            method = "deserialize",
             at = @At(value = "RETURN"),
             remap = false,
             cancellable = true
@@ -51,7 +51,7 @@ public class MsgNewSpellPatternS2CMixin {
     }
 
     @Inject(
-            method = "Lat/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C;serialize(Lnet/minecraft/network/FriendlyByteBuf;)V",
+            method = "serialize",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/network/FriendlyByteBuf;writeInt(I)Lio/netty/buffer/ByteBuf;",

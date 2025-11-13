@@ -29,7 +29,7 @@ public abstract class CastingVMMixin {
     private CastingImage image;
 
     @Inject(
-            method = "queueExecuteAndWrapIotas(Ljava/util/List;Lnet/minecraft/server/level/ServerLevel;)Lat/petrak/hexcasting/api/casting/eval/ExecutionClientView;",
+            method = "queueExecuteAndWrapIotas",
             at = @At(
                     value = "INVOKE",
                     target = "Lat/petrak/hexcasting/api/casting/eval/CastingEnvironment;postCast(Lat/petrak/hexcasting/api/casting/eval/vm/CastingImage;)V",
@@ -43,7 +43,7 @@ public abstract class CastingVMMixin {
     }
 
     @Inject(
-            method = "queueExecuteAndWrapIotas(Ljava/util/List;Lnet/minecraft/server/level/ServerLevel;)Lat/petrak/hexcasting/api/casting/eval/ExecutionClientView;",
+            method = "queueExecuteAndWrapIotas",
             at = @At(value = "RETURN"),
             remap = false
     )
@@ -51,7 +51,7 @@ public abstract class CastingVMMixin {
         ((ECVMixinInterface) (Object) cir.getReturnValue()).hexThings$setDepth(image.getUserData().getInt("hexthings_depth"));
     }
 
-    @Inject(method = "handleParentheses(Lat/petrak/hexcasting/api/casting/iota/Iota;)Lkotlin/Pair;", at = @At("HEAD"), cancellable = true, remap = false)
+    @Inject(method = "handleParentheses", at = @At("HEAD"), cancellable = true, remap = false)
     private void handleParentheses(Iota iota, CallbackInfoReturnable<Pair<CastingImage, ResolvedPatternType>> cir) throws MishapTooManyCloseParens {
         List<HexAngle> sig = null;
         if(iota instanceof PatternIota p) {
