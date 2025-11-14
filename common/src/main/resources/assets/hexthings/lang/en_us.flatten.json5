@@ -30,7 +30,7 @@
           "title": "Iota Embedding",
           "text": {
             "1": "In my studies, I've discovered a way to... \"embed\" iota within \
-            the hex itself, allowing me to avoid the need to reconstruct them with \
+            a hex itself, allowing me to avoid the need to reconstruct them with \
             every cast. This becomes especially useful when combined with \
             $(l:items/hexcasting)$(item)casting items/$, allowing for much faster \
             casts, or simply making the process of using the hex within them easier.",
@@ -40,7 +40,7 @@
             Locator's Distillation/$ and $(l:patterns/lists#hexcasting:replace)\
             $(action)Surgeon's Exaltation/$, and placing a $(l:patterns/lists\
             #hexcasting:splat)$(action)Flock's Disintegration/$ afterwards to \
-            access the iota. A very annoying and time-consuming process, certainly. \
+            access the iota — a very annoying and time-consuming process, certainly. \
             It does seem my forays into this art are viewed favorably by Nature, \
             as I've recently found two patterns for simplifying the process."
           }
