@@ -37,11 +37,28 @@
     },
     {
       type: "hexcasting:pattern",
+      op_id: "hexthings:isgreatersent",
+      anchor: "hexthings:isgreatersent",
+      input: "",
+      output: "bool | null",
+      text: "hexthings.book.patterns.spells.utils.isgreatersent",
+    },
+    {
+      type: "hexcasting:pattern",
       op_id: "hexthings:insert",
       anchor: "hexthings:insert",
       input: "List, Num, List",
       output: "List",
       text: "hexthings.book.patterns.spells.utils.insert",
+    },
+    {
+      type: "patchouli:text",
+      title: "hexthings.book.info.iota_embedding.title",
+      text: "hexthings.book.info.iota_embedding.text.1"
+    },
+    {
+      type: "patchouli:text",
+      text: "hexthings.book.info.iota_embedding.text.2"
     },
     {
       type: "hexcasting:manual_pattern_nosig",
@@ -66,14 +83,6 @@
           signature: "deee"
         }
       ]
-    },
-    {
-      type: "hexcasting:pattern",
-      op_id: "hexthings:isgreatersent",
-      anchor: "hexthings:isgreatersent",
-      input: "",
-      output: "bool | null",
-      text: "hexthings.book.patterns.spells.utils.isgreatersent",
     }
   ],
 }
