@@ -8,7 +8,7 @@
             noop: "Does nothing, but the tail can be any shape. Useful as \
             a placeholder to be replaced later",
             insert: "Similar to $(l:patterns/lists#hexcasting:replace)$(action)Surgeon's Exaltation/$, but replaces the \
-            element of the first list instead with the $(o)elements/$ of the second list, rather than the list itself.",
+            element of the first list instead with the $(o)contents/$ of the second list, rather than with the list itself.",
             unquote: "This pattern can be used to place raw iota directly into an \
             Introspection-Restrospection pair. After drawing this pattern, all \
             subsequent patterns are \"unescaped\", allowing them to be executed as \
