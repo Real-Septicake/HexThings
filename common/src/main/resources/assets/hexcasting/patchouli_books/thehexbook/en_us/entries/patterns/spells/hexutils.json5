@@ -1,11 +1,11 @@
 {
   name: "hexthings.book.patterns.spells.utils",
-  category: "hexcasting:patterns/spells",
+  category: "hexcasting:patterns",
   icon: "minecraft:iron_bars",
   advancement: "hexcasting:root",
   pages: [
     {
-      "type": "hexcasting:manual_pattern_nosig",
+      "type": "hexcasting:manual_pattern",
       "anchor": "hexthings:noop",
       "text": "hexthings.book.patterns.spells.utils.noop",
       "header": "hexcasting.action.hexthings:noop",
@@ -73,16 +73,11 @@
       ]
     },
     {
-      type: "hexcasting:manual_pattern_nosig",
+      type: "hexcasting:pattern",
       anchor: "hexthings:requote",
+      op_id: "hexthings:requote",
       text: "hexthings.book.patterns.spells.utils.requote",
-      header: "hexcasting.action.hexthings:requote",
-      patterns: [
-        {
-          startdir: "NORTH_WEST",
-          signature: "deee"
-        }
-      ]
+      header: "hexcasting.action.hexthings:requote"
     }
   ],
 }

@@ -18,7 +18,7 @@ object HexthingsActions : HexthingsRegistrar<ActionRegistryEntry>(
 ) {
     val FLAT_IN = make("insert", HexDir.NORTH_WEST, "wqwaeawqw", OpFlatInsert)
 
-    val ESCAPE_RESUME = make("escresume", HexDir.NORTH_WEST, "deee", OpResumeEscape)
+    val ESCAPE_RESUME = make("requote", HexDir.NORTH_WEST, "deee", OpResumeEscape)
 
     val IS_GREATER_SENT = make("isgreatersent", HexDir.EAST, "waeawaeqqq", OpSentinelStatus)
 

@@ -70,6 +70,11 @@
         },
       },
     },
+    special: {
+      "hexthings:": {
+        noop: "Patience"
+      }
+    },
     mishap: {
       "invalid_unquote": "Did not first cast Introjection."
     }
