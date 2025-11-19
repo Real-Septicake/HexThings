@@ -56,7 +56,6 @@
   hexcasting: {
     action: {
       "hexthings:": {
-        noop: "Patience",
         insert: "Flattening Exaltation",
         unquote: "Introjection",
         requote: "Retrojection",

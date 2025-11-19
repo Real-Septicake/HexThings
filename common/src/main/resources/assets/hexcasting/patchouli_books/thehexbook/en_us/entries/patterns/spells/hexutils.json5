@@ -8,7 +8,7 @@
       "type": "hexcasting:manual_pattern",
       "anchor": "hexthings:noop",
       "text": "hexthings.book.patterns.spells.utils.noop",
-      "header": "hexcasting.action.hexthings:noop",
+      "header": "hexcasting.special.hexthings:noop",
       "patterns": [
         {
           "startdir": "NORTH_EAST",
