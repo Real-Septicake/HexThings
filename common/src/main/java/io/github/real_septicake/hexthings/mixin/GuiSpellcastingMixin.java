@@ -27,7 +27,7 @@ public class GuiSpellcastingMixin {
         this.hexThings$depth = ((ECVMixinInterface) (Object) info).hexThings$getDepth();
     }
 
-    @Inject(method = "render", at = @At(value = "TAIL"), remap = false)
+    @Inject(method = "render", at = @At(value = "TAIL"))
     public void render(GuiGraphics graphics, int pMouseX, int pMouseY, float pPartialTick, CallbackInfo ci, @Local Font font, @Local PoseStack ps) {
         if(hexThings$depth > 0) {
             ps.pushPose();
