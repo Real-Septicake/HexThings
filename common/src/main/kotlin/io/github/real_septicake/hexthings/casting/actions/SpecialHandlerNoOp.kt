@@ -1,4 +1,4 @@
-package io.github.real_septicake.hexthings.casting.actions.spells
+package io.github.real_septicake.hexthings.casting.actions
 
 import at.petrak.hexcasting.api.casting.castables.Action
 import at.petrak.hexcasting.api.casting.castables.ConstMediaAction

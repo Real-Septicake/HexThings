@@ -51,6 +51,9 @@
         "text": "Some examples of Patience patterns that can be used."
       }
     },
+    tooltip: {
+      dict: "Dict"
+    }
   },
 
   hexcasting: {

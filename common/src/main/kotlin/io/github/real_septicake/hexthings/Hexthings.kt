@@ -6,6 +6,8 @@ import org.apache.logging.log4j.Logger
 import io.github.real_septicake.hexthings.config.HexthingsServerConfig
 import io.github.real_septicake.hexthings.networking.HexthingsNetworking
 import io.github.real_septicake.hexthings.registry.HexthingsActions
+import io.github.real_septicake.hexthings.registry.HexthingsArithmetics
+import io.github.real_septicake.hexthings.registry.HexthingsIotas
 import io.github.real_septicake.hexthings.registry.HexthingsSpecialHandlers
 
 object Hexthings {
@@ -21,7 +23,9 @@ object Hexthings {
         HexthingsServerConfig.init()
         initRegistries(
             HexthingsActions,
-            HexthingsSpecialHandlers
+            HexthingsSpecialHandlers,
+            HexthingsIotas,
+            HexthingsArithmetics
         )
         HexthingsNetworking.init()
     }
