@@ -4,9 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 0.1.3
+
+### Added
+
+- Dictionary Iota type for faster lookups, because I think they're neat
+
 ## 0.1.2
 
-## Fixed
+### Fixed
 
 - Issue where mod crashes on staff use when used with [HexDebug](https://modrinth.com/mod/hexdebug)
 
