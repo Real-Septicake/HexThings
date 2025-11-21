@@ -82,7 +82,7 @@
         unquote: "Introjection",
         requote: "Retrojection",
         isgreatersent: "Shard Reflection",
-        empty_dict: "Vacant Reflection",
+        empty_dict: "Impasse Reflection",
         dict_keys: "Accessor's Purification",
         dict_vals: "Accessed's Purification"
       },
