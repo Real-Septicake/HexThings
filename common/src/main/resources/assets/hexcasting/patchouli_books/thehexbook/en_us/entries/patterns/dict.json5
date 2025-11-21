@@ -39,7 +39,7 @@
       type: "hexcasting:pattern",
       op_id: "hexcasting:index_of",
       anchor: "hexcasting:index_of",
-      input: "dict",
+      input: "dict, key",
       output: "any",
       text: "hexthings.book.patterns.dict.index_of"
     },

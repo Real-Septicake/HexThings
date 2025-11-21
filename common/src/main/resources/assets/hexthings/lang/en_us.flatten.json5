@@ -37,7 +37,7 @@
           remove_from: "Removes the key-value pair from the Dictionary, pushing the \
           previous value, or $(l:patterns/consts#hexcasting:const/null)$(thing)Null/$ \
           if no value was present.",
-          index_of: "Gets the value present at the provided key, or $(l:patterns/consts\
+          index_of: "Pushes the value present at the provided key, or $(l:patterns/consts\
           #hexcasting:const/null)$(thing)Null/$ if no value was present.",
           dict_keys: "Pushes a list of the keys present in the Dictionary.",
           dict_vals: "Pushes a list of the values present in the Dictionary."
