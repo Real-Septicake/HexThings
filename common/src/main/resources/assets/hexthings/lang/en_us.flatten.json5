@@ -27,10 +27,9 @@
           empty_dict: "Creates an empty Dictionary iota.",
           abs: "Pushes the number of entries in the Dictionary",
           replace: "Places the iota in the Dictionary at the specified key. Not every \
-          iota type is allowed to be used as a key, with notable exceptions being \
-          $(l:patterns/entities)$(thing)Entities/$, $(l:patterns/lists)$(thing)Lists/$, \
-          $(l:casting/influences)$(thing)Garbage/$, and $(l:patterns/consts#hexcasting:\
-          const/null)$(thing)Null/$ iota. Attempting to set the value of a key to \
+          iota type is allowed to be used as a key, with notable the exceptions being \
+          $(l:casting/influences)$(thing)Garbage/$ and $(l:patterns/meta#hexcasting:\
+          eval/cc)$(thing)Jump/$ iota. Attempting to set the value of a key to \
           $(l:patterns/consts#hexcasting:const/null)$(thing)Null/$ will remove the \
           key the same way using $(l:patterns/dict#hexcasting:remove_from)$(action)\
           Excisor's Distillation/$ would.",
