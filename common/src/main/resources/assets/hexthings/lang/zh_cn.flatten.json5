@@ -11,7 +11,7 @@
 
           unquote: "此图案可用于直接将原始 iota 置入内省-反思对。绘制此图案后，所有\
           后续的图案会被“取消转义”，运行时会按原有功能执行。此效应的作用范围停止于\
-          $(l:patterns/hexutils#hexthings:requote)$(action)回掷/$。",
+          $(l:patterns/hexutils#hexthings:requote)$(action)反掷/$。",
 
           requote: "在$(l:patterns/hexutils#hexthings:unquote)$(action)内投/$后\
           绘制时，其会将栈上的所有 iota 置入转义的列表，并将栈恢复到原先的状态。",
@@ -95,7 +95,7 @@
         noop: "耐心",
         insert: "扁平之提整",
         unquote: "内投",
-        requote: "回掷",
+        requote: "反掷",
         isgreatersent: "碎片之精思",
         empty_dict: "僵局之精思",
         dict_keys: "访问器之纯化",
