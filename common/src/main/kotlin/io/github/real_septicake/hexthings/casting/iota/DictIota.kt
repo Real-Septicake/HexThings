@@ -59,7 +59,7 @@ class DictIota(val map: HashMap<String, Iota>) : Iota(TYPE, map) {
         }
 
         fun display(tag: CompoundTag): Component {
-            val comp = Component.literal(" { ")
+            val comp = Component.literal("{")
                 .withStyle(ChatFormatting.DARK_AQUA)
             var idx = 0
             while(tag.contains(idx.toString())) {
@@ -71,7 +71,7 @@ class DictIota(val map: HashMap<String, Iota>) : Iota(TYPE, map) {
                 if(tag.contains(idx.toString()))
                     comp.append(Component.literal(", ").withStyle(ChatFormatting.DARK_AQUA))
             }
-            comp.append(" }").withStyle(ChatFormatting.DARK_AQUA)
+            comp.append("}").withStyle(ChatFormatting.DARK_AQUA)
             return comp
         }
     }

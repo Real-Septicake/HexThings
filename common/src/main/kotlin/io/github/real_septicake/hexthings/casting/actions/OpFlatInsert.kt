@@ -12,16 +12,14 @@ object OpFlatInsert : ConstMediaAction {
     override val argc = 3
 
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
-        val list = args.getList(0, argc)
-        val idx = args.getPositiveIntUnder(1, list.size(), argc)
-        val iotas = args.getList(2, argc)
-        val mList = list.toMutableList()
-        val mIotas = iotas.toMutableList()
-        mList.removeAt(idx)
-        while(mIotas.isNotEmpty()) {
-            val iota = mIotas.removeLast()
-            mList.add(idx, iota)
+        val list = args.getList(0, argc).toMutableList()
+        val idx = args.getPositiveIntUnder(1, list.size, argc)
+        val iotas = args.getList(2, argc).toMutableList()
+        list.removeAt(idx)
+        while(iotas.isNotEmpty()) {
+            val iota = iotas.removeLast()
+            list.add(idx, iota)
         }
-        return SpellList.LList(mList).asActionResult
+        return SpellList.LList(list).asActionResult
     }
 }
