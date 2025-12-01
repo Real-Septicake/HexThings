@@ -9,6 +9,6 @@ object OpEmptyDict : ConstMediaAction {
     override val argc = 0
 
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
-        return listOf(DictIota(HashMap()))
+        return listOf(DictIota(HashMap(), HashMap()))
     }
 }

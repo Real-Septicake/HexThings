@@ -9,9 +9,17 @@ import net.minecraft.nbt.Tag
 import net.minecraft.nbt.TagParser.parseTag
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerLevel
+import kotlin.math.max
 
-class DictIota(val map: HashMap<String, Iota>) : Iota(TYPE, map) {
+class DictIota(val map: HashMap<String, Iota>, val deserial: MutableMap<String, Iota>) : Iota(TYPE, map) {
+    var depth = 0
     override fun isTruthy() = map.isNotEmpty()
+
+    init {
+        for(v in map.values) {
+            depth = max(v.depth(), depth)
+        }
+    }
 
     override fun toleratesOther(that: Iota?): Boolean {
         return typesMatch(this, that)
@@ -30,8 +38,18 @@ class DictIota(val map: HashMap<String, Iota>) : Iota(TYPE, map) {
         return tag
     }
 
+    override fun subIotas(): MutableIterable<Iota> {
+        return (map.values + deserial.values).toMutableList()
+    }
+
+    override fun size() = map.size * 2
+
     operator fun get(key: Iota) = map[IotaType.serialize(key).toString()]
-    operator fun set(key: Iota, value: Iota) { map[IotaType.serialize(key).toString()] = value }
+    operator fun set(key: Iota, value: Iota) {
+        map[IotaType.serialize(key).toString()] = value
+        deserial[IotaType.serialize(key).toString()] = key
+        depth = max(depth, value.depth())
+    }
 
     companion object {
         val TYPE: IotaType<DictIota> = object : IotaType<DictIota>() {
@@ -48,14 +66,17 @@ class DictIota(val map: HashMap<String, Iota>) : Iota(TYPE, map) {
             val ctag = tag.asCompound
             var idx = 0
             val map = HashMap<String, Iota>()
+            val toIota = HashMap<String, Iota>()
             while(ctag.contains(idx.toString())) {
                 val entry = ctag[idx.toString()]!!.asCompound
                 val key = entry["key"]!!.asString
                 val value = IotaType.deserialize(entry["value"]?.asCompound, world)
+
                 map[key] = value
+                toIota[key] = IotaType.deserialize(parseTag(key).asCompound, world)
                 idx++
             }
-            return DictIota(map)
+            return DictIota(map, toIota)
         }
 
         fun display(tag: CompoundTag): Component {
