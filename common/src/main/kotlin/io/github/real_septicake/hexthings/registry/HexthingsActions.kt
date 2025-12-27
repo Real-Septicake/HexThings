@@ -13,11 +13,13 @@ import io.github.real_septicake.hexthings.casting.actions.dict.OpDictEntries
 import io.github.real_septicake.hexthings.casting.actions.dict.OpDictKeys
 import io.github.real_septicake.hexthings.casting.actions.dict.OpDictVals
 import io.github.real_septicake.hexthings.casting.actions.dict.OpEmptyDict
+import io.github.real_septicake.hexthings.casting.actions.list.OpFlatInsert
+import io.github.real_septicake.hexthings.casting.actions.list.OpRange
 import io.github.real_septicake.hexthings.casting.actions.meta.OpResumeEscape
-import io.github.real_septicake.hexthings.casting.actions.uiua.OpUiuaDrop
-import io.github.real_septicake.hexthings.casting.actions.uiua.OpUiuaRotate
-import io.github.real_septicake.hexthings.casting.actions.uiua.OpUiuaTake
-import io.github.real_septicake.hexthings.casting.actions.uiua.OpUiuaWhere
+import io.github.real_septicake.hexthings.casting.actions.list.uiua.OpUiuaDrop
+import io.github.real_septicake.hexthings.casting.actions.list.uiua.OpUiuaRotate
+import io.github.real_septicake.hexthings.casting.actions.list.uiua.OpUiuaTake
+import io.github.real_septicake.hexthings.casting.actions.list.uiua.OpUiuaWhere
 
 object HexthingsActions : HexthingsRegistrar<ActionRegistryEntry>(
     HexRegistries.ACTION,
@@ -38,6 +40,7 @@ object HexthingsActions : HexthingsRegistrar<ActionRegistryEntry>(
     val UIUA_DROP = make("uiua_drop", HexDir.NORTH_WEST, "qaeaqda") { OpUiuaDrop }
     val UIUA_ROTATE = make("uiua_rotate", HexDir.NORTH_WEST, "qaeaqweeee") { OpUiuaRotate }
     val UIUA_WHERE = make("uiua_where", HexDir.NORTH_WEST, "qaeaqeaa") { OpUiuaWhere }
+    val MAKE_RANGE = make("make_range", HexDir.NORTH_WEST, "qqqqqeweaqa") { OpRange }
 
     private fun make(name: String, startDir: HexDir, signature: String, getAction: () -> Action) = register(name) {
         ActionRegistryEntry(HexPattern.fromAngles(signature, startDir), getAction())

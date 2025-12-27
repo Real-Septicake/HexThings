@@ -45,14 +45,6 @@
       text: "hexthings.book.patterns.utils.isgreatersent",
     },
     {
-      type: "hexcasting:pattern",
-      op_id: "hexthings:insert",
-      anchor: "hexthings:insert",
-      input: "list, num, list",
-      output: "list",
-      text: "hexthings.book.patterns.utils.insert",
-    },
-    {
       type: "patchouli:text",
       title: "hexthings.book.info.iota_embedding.title",
       text: "hexthings.book.info.iota_embedding.text.1"

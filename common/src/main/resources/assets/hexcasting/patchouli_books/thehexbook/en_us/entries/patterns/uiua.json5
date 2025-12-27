@@ -1,5 +1,5 @@
 {
-  name: "hexthings.book.patterns.uiua",
+  name: "hexthings.book.patterns.lists",
   category: "hexcasting:patterns",
   icon: "minecraft:acacia_sign",
   advancement: "hexcasting:root",
@@ -10,7 +10,27 @@
       anchor: "hexthings:uiua_take",
       input: "list, (num | [num])",
       output: "list",
-      text: "hexthings.book.patterns.uiua.uiua_take"
+      text: "hexthings.book.patterns.lists.uiua_take"
+    },
+    {
+      type: "hexcasting:pattern",
+      op_id: "hexthings:insert",
+      anchor: "hexthings:insert",
+      input: "list, num, list",
+      output: "list",
+      text: "hexthings.book.patterns.lists.insert",
+    },
+    {
+      type: "hexcasting:pattern",
+      op_id: "hexthings:make_range",
+      anchor: "hexthings:make_range",
+      input: "num, num, (num | null)",
+      output: "list",
+      text: "hexthings.book.patterns.lists.make_range.1"
+    },
+    {
+      type: "patchouli:text",
+      text: "hexthings.book.patterns.lists.make_range.2"
     },
     {
       type: "hexcasting:pattern",
@@ -18,7 +38,7 @@
       anchor: "hexthings:uiua_drop",
       input: "list, (num | [num])",
       output: "list",
-      text: "hexthings.book.patterns.uiua.uiua_drop"
+      text: "hexthings.book.patterns.lists.uiua_drop"
     },
     {
       type: "hexcasting:pattern",
@@ -26,7 +46,7 @@
       anchor: "hexthings:uiua_rotate",
       input: "list, num",
       output: "list",
-      text: "hexthings.book.patterns.uiua.uiua_rotate"
+      text: "hexthings.book.patterns.lists.uiua_rotate"
     },
     {
       type: "hexcasting:pattern",
@@ -34,7 +54,7 @@
       anchor: "hexthings:uiua_where",
       input: "list",
       output: "list",
-      text: "hexthings.book.patterns.uiua.uiua_where"
+      text: "hexthings.book.patterns.lists.uiua_where"
     },
     {
       type: "hexcasting:pattern",
@@ -42,7 +62,7 @@
       anchor: "hexcasting:div",
       input: "list, list",
       output: "list",
-      text: "hexthings.book.patterns.uiua.div"
+      text: "hexthings.book.patterns.lists.div"
     },
     {
       type: "hexcasting:pattern",
@@ -50,7 +70,7 @@
       anchor: "hexcasting:mul",
       input: "list, list",
       output: "list",
-      text: "hexthings.book.patterns.uiua.mul"
-    }
+      text: "hexthings.book.patterns.lists.mul"
+    },
   ]
 }
