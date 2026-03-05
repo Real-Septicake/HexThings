@@ -25,18 +25,28 @@ object OpUiuaDrop : ConstMediaAction {
             else
                 ret.addAll(list.dropLast(it.toInt().absoluteValue))
         }.ifRight {
-            ret.addAll(list)
-            for(i in it) {
-                if(i is DoubleIota) {
-                    val rounded = i.double.roundToInt()
-                    val max = it.size()
-                    if(rounded < 0 || rounded >= max)
-                        throw MishapInvalidIota.of(i, 0, "int.positive.less", max)
-                    ret.removeAt(rounded)
-                } else {
+            val indices = it.toSet().map { v ->
+                if(v is DoubleIota)
+                    v.double.roundToInt()
+                else
                     throw MishapInvalidIota.ofType(ListIota(it), 0, "int_list")
-                }
             }
+            list.forEachIndexed { index, iota ->
+                if(index !in indices)
+                    ret += iota
+            }
+//            ret.addAll(list)
+//            for(i in it) {
+//                if(i is DoubleIota) {
+//                    val rounded = i.double.roundToInt()
+//                    val max = it.size()
+//                    if(rounded < 0 || rounded >= max)
+//                        throw MishapInvalidIota.of(i, 0, "int.positive.less", max)
+//                    ret.removeAt(rounded)
+//                } else {
+//                    throw MishapInvalidIota.ofType(ListIota(it), 0, "int_list")
+//                }
+//            }
         }
         return listOf(ListIota(ret))
     }
