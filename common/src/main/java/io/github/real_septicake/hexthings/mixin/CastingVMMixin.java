@@ -68,7 +68,7 @@ public abstract class CastingVMMixin {
                 newUserData.put("hexthings_prev", image2);
                 newUserData.putInt("hexthings_depth", image2.getInt("hexthings_depth") + 1);
                 CastingImage newImage = image.copy(new ArrayList<>(), 0, new ArrayList<>(),
-                        false, image.getOpsConsumed(), newUserData);
+                        false, 0, newUserData);
                 cir.setReturnValue(new Pair<>(newImage, ResolvedPatternType.EVALUATED));
                 cir.cancel();
             }

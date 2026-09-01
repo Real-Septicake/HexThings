@@ -20,13 +20,7 @@ object OpResumeEscape : Action {
             throw MishapInvalidUnquote()
         val prevImage = CastingImage.loadFromNbt(prev, env.world)
         val newParens = prevImage.parenthesized.toMutableList()
-//        newParens.add(
-//            CastingImage.ParenthesizedIota(PatternIota(SpecialPatterns.INTROSPECTION), false)
-//        )
         newParens.addAll(stack.map { CastingImage.ParenthesizedIota(it, false) })
-//        newParens.add(
-//            CastingImage.ParenthesizedIota(PatternIota(SpecialPatterns.RETROSPECTION), false)
-//        )
         val newPrevImage = prevImage.copy(parenthesized = newParens, opsConsumed = prevImage.opsConsumed + image.opsConsumed)
         return OperationResult(newPrevImage, listOf(), continuation, HexEvalSounds.THOTH)
     }
