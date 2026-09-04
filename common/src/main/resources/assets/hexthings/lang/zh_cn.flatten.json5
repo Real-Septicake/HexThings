@@ -150,31 +150,4 @@
       }
     }
   },
-
-  text: {
-    "autoconfig.hexthings": {
-      title: "HexThings配置",
-
-      category: {
-        client: "客户端",
-        server: "服务端",
-      },
-
-      option: {
-        client: {
-          dummyClientConfigOption: {
-            "": "Dummy Client Config Option",
-            "@Tooltip": "This is an example of a client-side config option that accepts a boolean.",
-          },
-        },
-
-        server: {
-          dummyServerConfigOption: {
-            "": "Dummy Server Config Option",
-            "@Tooltip": "This is an example of a server-side config option that accepts an integer.",
-          },
-        },
-      },
-    },
-  },
 }

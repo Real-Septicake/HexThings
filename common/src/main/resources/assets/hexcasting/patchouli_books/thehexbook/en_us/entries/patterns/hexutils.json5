@@ -54,17 +54,11 @@
       text: "hexthings.book.info.iota_embedding.text.2"
     },
     {
-      type: "hexcasting:manual_pattern",
+      type: "hexcasting:pattern",
       anchor: "hexthings:unquote",
       op_id: "hexthings:unquote",
       text: "hexthings.book.patterns.utils.unquote",
-      header: "hexcasting.action.hexthings:unquote",
-      patterns: [
-        {
-          startdir: "NORTH_EAST",
-          signature: "aqqq"
-        }
-      ]
+      header: "hexcasting.action.hexthings:unquote"
     },
     {
       type: "hexcasting:pattern",

@@ -32,7 +32,7 @@ public class MsgNewSpellPatternS2CMixin {
                     shift = At.Shift.AFTER
             )
     )
-    private static void readDepth(ByteBuf buffer, CallbackInfoReturnable<MsgNewSpellPatternS2C> cir, @Local FriendlyByteBuf buf) {
+    private static void readDepth(ByteBuf buffer, CallbackInfoReturnable<MsgNewSpellPatternS2C> cir, @Local(name = "buf") FriendlyByteBuf buf) {
         hexThings$depth = buf.readInt();
     }
 

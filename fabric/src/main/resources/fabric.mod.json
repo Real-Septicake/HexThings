@@ -30,10 +30,6 @@
     "fabric-datagen": [{
       "adapter": "kotlin",
       "value": "io.github.real_septicake.hexthings.fabric.datagen.FabricHexthingsDatagen"
-    }],
-    "modmenu": [{
-      "adapter": "kotlin",
-      "value": "io.github.real_septicake.hexthings.fabric.FabricHexthingsModMenu"
     }]
   },
   "mixins": [

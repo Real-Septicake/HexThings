@@ -20,6 +20,7 @@ import io.github.real_septicake.hexthings.casting.actions.list.uiua.OpUiuaDrop
 import io.github.real_septicake.hexthings.casting.actions.list.uiua.OpUiuaRotate
 import io.github.real_septicake.hexthings.casting.actions.list.uiua.OpUiuaTake
 import io.github.real_septicake.hexthings.casting.actions.list.uiua.OpUiuaWhere
+import io.github.real_septicake.hexthings.casting.actions.meta.OpStopEscape
 
 object HexthingsActions : HexthingsRegistrar<ActionRegistryEntry>(
     HexRegistries.ACTION,
@@ -27,6 +28,7 @@ object HexthingsActions : HexthingsRegistrar<ActionRegistryEntry>(
 ) {
     val FLAT_IN = make("insert", HexDir.NORTH_WEST, "wqwaeawqw") { OpFlatInsert }
 
+    val ESCAPE_STOP = make("unquote", HexDir.NORTH_EAST, "aqqq") { OpStopEscape }
     val ESCAPE_RESUME = make("requote", HexDir.NORTH_WEST, "deee") { OpResumeEscape }
 
     val IS_GREATER_SENT = make("isgreatersent", HexDir.EAST, "waeawaeqqq") { OpSentinelStatus }
